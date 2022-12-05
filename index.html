@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/la-cyber-securite.png">
+    <link rel="stylesheet" href="style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b3aa74729e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>No password no enter</title>
+  </head>
+  <body>
+    <i class="fa-solid fa-ghost" id="ghost"></i>
+    <form style="display: block" id="form">
+      
+      <p id="title">Login</p>
+      <alert>
+        <div id="overlay" ></div>
+        <div id="alertPanel" ></div>
+      </alert>
+    
+      <input type="text" id="username" placeholder="Username" required />
+      <br />
+      <input type="password" id="password" placeholder="Password" required/>
+   
+      <i class="fa-solid fa-eye" id="open" onclick="show()"></i>
+      <i class="fa-solid fa-eye-slash" id="close" onclick="hide()"></i>
+      <br />
+      <div>
+        <button id="submit" onclick="verif()" type="button">Click me !</button>
+    
+      </div>
+    </form>
+
+    <span id="particles-js"> </span>
+
+    <!-- <div id="secondePage">
+
+    </div>  -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
