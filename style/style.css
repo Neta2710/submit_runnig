@@ -9,6 +9,11 @@
 html {
     overflow-y : hidden;
 }
+body {
+  background: linear-gradient(#1607e7, #080808);   
+  width: 100vw;
+  height: 100vh;
+}
 
 i {
   position: absolute;
@@ -106,7 +111,7 @@ form {
         /* css background */
 
 
-canvas {
+/* canvas {
   display: block;
   background: linear-gradient(#1607e7, #080808);    
 } 
@@ -122,7 +127,7 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-} 
+}  */
 
   /* css background end */
 
