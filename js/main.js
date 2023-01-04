@@ -71,6 +71,29 @@ function verif() {
   }
 }
 
+
+document.onmousemove = mouseCoordinates;
+var output = document.getElementById("output");
+
+function mouseCoordinates(event) {
+  var xPos = event.clientX;
+  var yPos = event.clientY;
+  ghost.style.left = xPos + "px";
+  ghost.style.top = yPos + "px";
+}
+
+
+window.alert = function(titre, message) {
+	document.getElementById("alertPanel").innerHTML = "<span class=\"close\" onclick=\"closealert();\"></span><h2 id=`titreAlert`>" + titre + "</h2><div class=\"texte\">" + message + "</div>";
+	document.getElementById('alertPanel').style.display='block';
+	document.getElementById('overlay').style.display='block';
+}
+function closealert()
+{
+	document.getElementById('alertPanel').style.display='none';
+	document.getElementById('overlay').style.display='none';
+}
+
 particlesJS("particles-js", {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -133,25 +156,3 @@ update = function () {
     requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-
-document.onmousemove = mouseCoordinates;
-var output = document.getElementById("output");
-
-function mouseCoordinates(event) {
-  var xPos = event.clientX;
-  var yPos = event.clientY;
-  ghost.style.left = xPos + "px";
-  ghost.style.top = yPos + "px";
-}
-
-
-window.alert = function(titre, message) {
-	document.getElementById("alertPanel").innerHTML = "<span class=\"close\" onclick=\"closealert();\"></span><h2 id=`titreAlert`>" + titre + "</h2><div class=\"texte\">" + message + "</div>";
-	document.getElementById('alertPanel').style.display='block';
-	document.getElementById('overlay').style.display='block';
-}
-function closealert()
-{
-	document.getElementById('alertPanel').style.display='none';
-	document.getElementById('overlay').style.display='none';
-}
